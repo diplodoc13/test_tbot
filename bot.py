@@ -11,22 +11,16 @@ from config import TOKEN
 bot = telebot.TeleBot(TOKEN)
 
 
-# @bot.message_handler(commands=["start"])
-# def start_message(message):
-#     answer_message = f"Hello, <b>{message.from_user.first_name}</b>"
-#     bot.send_message(message.chat.id, answer_message, parse_mode="html")
-#
-#
-# @bot.message_handler()
-# def check_message_metods(message):
-#     if message.text == "message":
-#         bot.send_message(message.chat.id, message, parse_mode="html")
+@bot.message_handler(commands=["start"])
+def start_message(message):
+    answer_message = f"Hello, <b>{message.from_user.first_name}</b>"
+    bot.send_message(message.chat.id, answer_message, parse_mode="html")
 
 
 @bot.message_handler()
 def send_photo(message):
     if message.text == "photo":
-        sending_photo = open("/images/2.png", "rb")
+        sending_photo = open("img/2.png", "rb")
         bot.send_photo(message.chat.id, sending_photo)
 
 
