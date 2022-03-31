@@ -1,0 +1,14 @@
+[Unit]
+Description=Awesome Bot
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=bot
+WorkingDirectory=/home/bot/python3.10_projects/telegram_bots/bot_1_test
+ExecStart=/home/bot/python3.10_projects/telegram_bots/bot_1_test/venv_bot_1_test/bin/python3.10 /home/bot/python3.10_projects/telegram_bots/bot_1_test/bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
