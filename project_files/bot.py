@@ -20,7 +20,7 @@ def start_message(message):
 @bot.message_handler()
 def send_photo(message):
     if message.text == "photo":
-        sending_photo = open("img/2.png", "rb")
+        sending_photo = open("../project_imgs/2.png", "rb")
         bot.send_photo(message.chat.id, sending_photo)
 
 
