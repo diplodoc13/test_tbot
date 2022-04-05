@@ -10,5 +10,3 @@ from aiogram import Bot, dispatcher
 
 bot = Bot(token=TOKEN)
 dp = dispatcher(bot)
-
-@dp.message_handler()
